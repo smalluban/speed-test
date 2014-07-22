@@ -5,3 +5,6 @@ module.exports = class App extends Neck.App
 
   pushList: ->
     @scope.list = window.list
+
+  clearList: ->
+    @scope.list = false
