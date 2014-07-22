@@ -1,0 +1,9 @@
+{
+  "name": "YOUR-APP-NAME",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "neck": "~0.3.1",
+    "angular": "~1.2.20"
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>App</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="css/app.css">
+  
+  <script src="js/vendor.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <h1>Render test with big amount of data - array with 200 elements with nested array of 20 elements</h1>
+  <p><a href="https://github.com/smalluban/speed-test">https://github.com/smalluban/speed-test</a></p>
+  
+  <div id="box">
+    <div ng-app="myApp">
+      <div ng-controller="ListController">
+        <h2>Angular</h1>
+        <p>ng-repeat for all arrays</p>
+        <a href="#" ng-click="render()">render</a>
+        <ul ng-repeat="item in list">
+          <li>
+            <div>{{ item.name }}</div>
+            <ul ng-repeat="nested in item.nested">
+              <li>
+                <span>{{nested.a}}</span>
+                <span>{{nested.b}}</span>
+                <span>{{nested.c}}</span>
+                <span>{{nested.d}}</span>
+                <span>{{nested.e}}</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div ui-neck="'app'" neck-injector="'commonjs'"></div>
+  </div>
+
+</body>
+</html>
